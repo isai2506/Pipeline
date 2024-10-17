@@ -1,0 +1,13 @@
+pipeline {
+    agent any
+    environment {
+        INSTAGRAM_ISAI = "@isai_massa"
+    }
+    stages {
+        stage("saludo1") {
+            steps {
+                echo "hola desde saludo 1"
+            }
+        }
+    }
+}
