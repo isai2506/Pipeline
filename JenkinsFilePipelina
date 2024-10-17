@@ -1,0 +1,41 @@
+pipeline {
+    agent any
+    environment {
+        INSTAGRAM_ISAI = "@isai_massa"
+    }
+    stages {
+        stage("saludo1") {
+            steps {
+                echo "hola desde saludo 1"
+            }
+        }
+        stage("saludo2") {
+            steps {
+                echo "hola desde saludo 2, paso 1"
+                echo "hola desde saludo 2, paso 2"
+            }
+        }
+        stage("imprimir instagram") {
+            steps {
+                echo "($env.INSTAGRAM_ISAI)"
+                echo "($INSTAGRAM_ISAI)"
+                echo "$INSTAGRAM_ISAI"
+                echo "======================="
+                sh "echo ${INSTAGRAM_ISAI}"
+                echo "======================="
+
+            }
+        }
+        stage("imprimir variable definida previamente") {
+            steps {
+                echo "($env.Instagram)"
+                echo "(Instagram)"
+                echo "Instagram"
+                echo "======================="
+                sh "echo ${Instagram}"
+                echo "======================="
+
+            }
+        }
+    }
+}
