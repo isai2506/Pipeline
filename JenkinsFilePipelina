@@ -23,18 +23,6 @@ pipeline {
                 echo "======================="
                 sh "echo ${INSTAGRAM_ISAI}"
                 echo "======================="
-
-            }
-        }
-        stage("imprimir variable definida previamente") {
-            steps {
-                echo "($env.Instagram)"
-                echo "(Instagram)"
-                echo "Instagram"
-                echo "======================="
-                sh "echo ${Instagram}"
-                echo "======================="
-
             }
         }
     }
